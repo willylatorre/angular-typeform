@@ -49,7 +49,7 @@
 				tfText: '@',
 				tfStyle: '@'
 			},
-			template: '<div class="typeform-widget" data-url="https://{{form.account}}.typeform.com/to/{{tfId}}" data-text="{{tfText}}" ng-attr-style="{{style}}"></div>',
+			template: '<div class="typeform-widget" data-url="https://{{accountId}}.typeform.com/to/{{tfId}}" data-text="{{tfText}}" ng-attr-style="{{style}}"></div>',
 			controller: function($scope, typeformConfig) {
 
 				if (!typeformConfig.accountId) {
@@ -71,7 +71,7 @@
 						gi = d.getElementById,
 						ce = d.createElement,
 						gt = d.getElementsByTagName,
-						id = 'typef_orm',
+						id = 'typef_orm_widget',
 						b = 'https://s3-eu-west-1.amazonaws.com/share.typeform.com/';
 
 					if (!gi.call(d, id)) {
@@ -152,7 +152,7 @@
 						gi=d.getElementById,
 						ce=d.createElement,
 						gt=d.getElementsByTagName,
-						id='typef_orm',
+						id='typef_orm_share',
 						b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';
 					if(!gi.call(d,id)){
 						js=ce.call(d,'script');

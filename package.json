@@ -1,6 +1,6 @@
 {
   "name": "angular-typeform",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An angular 1.x directive for Typeform ",
   "main": "angular-typeform.js",
   "repository": {
