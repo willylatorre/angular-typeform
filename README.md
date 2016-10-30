@@ -1,7 +1,7 @@
 # angular-typeform
 An Angular 1.x directive for [Typeform](http://typeform.com)
 
-![angular-typeform Screenshot](https://raw.github.com/willylatorre/angular-typeform/master/screenshot.png)
+<img src="https://raw.github.com/willylatorre/angular-typeform/master/screenshot.png" width="400" />
 
 The purpose of this simple directive is to wrap Typeform's logic in order to make it work with angular.
 
@@ -31,7 +31,8 @@ app.config(function (typeformConfigProvider) {
 });
 ```
 
-*You can find your account as a subdomain of the Typeform link https://**MYACCOUNT**.typeform.com/to/TYPEFORM_ID*
+*You can find your account as a subdomain of any Typeform's link
+ https://**MYACCOUNT**.typeform.com/to/TYPEFORM_ID*
 
 ## Usage
 
@@ -71,8 +72,7 @@ The direcctive supports the following attributes
 
 **tf-type**: choose between ```link``` or ```button```, by default it uses *link*
 **tf-mode**: choose between ```banner``` or ```popup```, by default it uses *popup*
-**tf-style**: You can configure the style of the link adding your CSS. Keep in mind 
-that Typeform adds its own css for the *button* directive, so you'll have to override certain params.
+**tf-style**: You can configure the style of the link adding your CSS. Keep in mind that Typeform adds its own css for the *button* directive, so you'll have to override certain params.
 
 
 ## Licence
