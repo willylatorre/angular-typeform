@@ -1,0 +1,24 @@
+{
+  "name": "angular-typeform",
+  "version": "0.1.0",
+  "description": "An angular 1.x directive for Typeform ",
+  "main": "angular-typeform.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willylatorre/angular-typeform.git"
+  },
+  "keywords": [
+    "angular",
+    "directive",
+    "typeform"
+  ],
+  "dependencies": {
+    "angular": ">=1.2.26"
+  },
+  "author": "Adrian Latorre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/willylatorre/angular-typeform/issues"
+  },
+  "homepage": "https://github.com/willylatorre/angular-typeform#readme"
+}
