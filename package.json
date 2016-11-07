@@ -1,6 +1,6 @@
 {
   "name": "angular-typeform",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "An angular 1.x directive for Typeform ",
   "main": "angular-typeform.js",
   "repository": {
@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/willylatorre/angular-typeform/issues"
   },
-  "homepage": "https://github.com/willylatorre/angular-typeform#readme"
+  "homepage": "https://github.com/willylatorre/angular-typeform#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "pump": "^1.0.1"
+  }
 }

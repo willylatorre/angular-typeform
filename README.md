@@ -70,12 +70,12 @@ To add a link to a Typeform just use the following directive
 
 The direcctive supports the following attributes
 
-**tf-type**: choose between ```link``` or ```button```, by default it uses *link*
-**tf-mode**: choose between ```banner``` or ```popup```, by default it uses *popup*
-**tf-style**: You can configure the style of the link adding your CSS. Keep in mind that Typeform adds its own css for the *button* directive, so you'll have to override certain params.
+* **tf-type**: choose between ```link``` or ```button```, by default it uses *link*
+* **tf-mode**: choose between ```banner``` or ```popup```, by default it uses *popup*
+* **tf-style**: You can configure the style of the link adding your CSS. Keep in mind that Typeform adds its own css for the *button* directive, so you'll have to override certain params.
 
 
-## Licence
+## License
 
 As AngularJS itself, this module is released under the permissive [MIT License](http://revolunet.mit-license.org). Your contributions are always welcome.
 

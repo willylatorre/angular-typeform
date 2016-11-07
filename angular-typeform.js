@@ -49,8 +49,8 @@
 				tfText: '@',
 				tfStyle: '@'
 			},
-			template: '<div class="typeform-widget" data-url="https://{{accountId}}.typeform.com/to/{{tfId}}" data-text="{{tfText}}" ng-attr-style="{{style}}"></div>',
-			controller: function($scope, typeformConfig) {
+			template: '<div class="typeform-widget" ng-attr-data-url="https://{{accountId}}.typeform.com/to/{{tfId}}" ng-attr-data-text="{{tfText}}" ng-attr-style="{{style}}"></div>',
+			controller: function($scope, typeformConfig, $timeout) {
 
 				if (!typeformConfig.accountId) {
 					throw new EvalError('Account ID not set in config');
@@ -85,7 +85,11 @@
 						new Typeform.Widget
 					}
 				}
-				initTypeformScript();
+
+				//init when we have the params
+				$timeout(function(){
+					initTypeformScript();
+				});
 
 			},
 			link: function (scope, element, attrs) {
@@ -106,7 +110,7 @@
 				tfText: '@',
 				tfStyle: '@'
 			},
-			template: '<a class="typeform-share {{type}}" href="https://{{accountId}}.typeform.com/to/{{tfId}}" data-mode="{{mode}}" ng-attr-style="{{style}}" target="_blank">{{tfText}}</a>',
+			template: '<a ng-attr-class="typeform-share {{type}}" ng-attr-href="https://{{accountId}}.typeform.com/to/{{tfId}}" ng-attr-data-mode="{{mode}}" ng-attr-style="{{style}}" target="_blank">{{tfText}}</a>',
 			controller: function($scope, typeformConfig) {
 
 				var MODE_POPUP = "popup", MODE_BANNER = "banner";
@@ -121,7 +125,11 @@
 				var _type = getTypeFromDirective($scope.tfType);
 				$scope.type = _type;
 				$scope.mode =  getModeFromDirective($scope.tfMode);
-				initTypeformLinkScript(_type);
+
+				$timeout(function(){
+					initTypeformLinkScript(_type);
+				});
+
 
 
 				//Helpers
