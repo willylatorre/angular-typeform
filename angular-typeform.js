@@ -24,7 +24,7 @@
 		});
 
 	angular.module('angularTypeform')
-		.controller('ControllerEmbed', ['$scope', 'typeformConfig', '$timeout', function embedController($scope, typeformConfig, $timeout) {
+		.controller('ControllerEmbed', ['$scope', '$element', 'typeformConfig', '$timeout', function embedController($scope, $element, typeformConfig, $timeout) {
 
 			if (!typeformConfig.accountId) {
 				throw new EvalError('Account ID not set in config');
@@ -38,25 +38,27 @@
 
 			function initTypeformScript() {
 				var qs,
-					js,
-					q,
-					s,
-					d = document,
-					gi = d.getElementById,
-					ce = d.createElement,
-					gt = d.getElementsByTagName,
-					id = 'typef_orm_widget',
-					b = 'https://s3-eu-west-1.amazonaws.com/share.typeform.com/';
+						js,
+						 q,
+						 s,
+						 d=document,
+						 gi=d.getElementById,
+						 ce=d.createElement,
+						 gt=d.getElementsByTagName,
+						 id="typef_orm_widget",
+						 b="https://embed.typeform.com/";
 
 				if (!gi.call(d, id)) {
-					js = ce.call(d, 'script');
-					js.id = id;
-					js.src = b + 'widget.js';
-					q = gt.call(d, 'script')[0];
-					q.parentNode.insertBefore(js, q)
+					js=ce.call(d,"script");
+						js.id=id;
+						js.src=b+"embed.js";
+						q=gt.call(d,"script")[0];
+						q.parentNode.insertBefore(js,q);
 				} else {
 					//For angular apps
-					new Typeform.Widget
+					// new Typeform.Widget
+					var typeFormUrl = 'https://' + $scope.accountId + '.typeform.com/to/' + $scope.tfId;
+					new window.typeformEmbed.makeWidget($element[0], typeFormUrl);
 				}
 			}
 
