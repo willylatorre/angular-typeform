@@ -1,0 +1,23 @@
+{
+  "name": "angular-typeform",
+  "version": "0.0.2",
+  "description": "An angular 1.x directive for Typeform",
+  "main": "angular-typeform.js",
+  "authors": [
+    "Adrian Latorre"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "directive",
+    "typeform"
+  ],
+  "homepage": "https://github.com/willylatorre/angular-typeform",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
